@@ -1,0 +1,50 @@
+{% extends "./base.html" %}
+
+{% block title %}
+
+Clientes de Daruma Ink
+
+{% endblock %}
+
+{% block body %}
+<div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Listado de clientes</h1>
+        <div class="table-responsive">
+        <table class="table table-stripped">
+            <thead>
+
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Direccion</th>
+                <th>Ciudad</th>
+                <th>Email</th>
+            </tr>
+
+            </thead>
+            <tbody>
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellido}}</td>
+                <td>{{cliente.edad}}</td>
+                <td>{{cliente.direccion}}</td>
+                <td>{{cliente.ciudad}}</td>
+                <td>{{cliente.email}}</td>
+            </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    <button>
+        <a href="form_clientes">Agregar cliente</a>
+    </button>
+    </div>   
+
+{% endblock %}

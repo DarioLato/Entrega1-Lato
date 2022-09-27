@@ -1,0 +1,23 @@
+{% extends "./base.html" %}
+
+{% block title %}
+
+<p>Estas buscando los tattoos realizados en el estudio</p>
+
+{% endblock %}
+
+{% block body %}
+
+
+Busqueda por ID
+
+    
+    <form action="/TattooApp/buscar" method="GET"> {% csrf_token %}
+
+        <input type="number" name="id" id ="id">
+        <input type="submit" value="buscar">
+
+    </form>
+
+
+{% endblock %}

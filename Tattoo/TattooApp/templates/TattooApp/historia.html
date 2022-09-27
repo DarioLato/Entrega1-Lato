@@ -1,0 +1,56 @@
+{% extends "./base.html" %}
+
+{% block title %}
+
+Tattoos de Daruma Ink
+
+{% endblock %}
+
+{% block body %}
+<div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Trabajos realizados en Daruma Ink</h1>
+        <div class="table-responsive">
+        <table class="table table-stripped">
+            <thead>
+
+            <tr>
+                <th>id</th>
+                <th>Nombre cliente</th>
+                <th>Apellido Cliente</th>       
+                <th>Artista</th>
+                <th>fecha</th>
+                <th>estilo</th>
+                <th>lugar</th>
+            </tr>
+
+            </thead>
+            <tbody>
+            {% for tattoos in tattoos %}
+            <tr>
+                <td>{{tattoos.id}}</td>
+                <td>{{tattoos.nombre_cliente}}</td>
+                <td>{{tattoos.apellido_cliente}}</td>
+                <td>{{tattoos.nombre_artista}}</td>
+                <td>{{tattoos.fecha_tat}}</td>
+                <td>{{tattoos.estilo_tat}}</td>
+                <td>{{tattoos.lugar_tat}}</td>
+            </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <button>
+            <a href="form_tattoo">Agregar nuevo trabajo</a>
+        </button>
+
+        <button>
+            <a href="buscar_tattoo">Buscar trabajos realizados</a>
+        </button>
+    </div>   
+
+{% endblock %}

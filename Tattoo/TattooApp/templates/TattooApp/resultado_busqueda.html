@@ -1,0 +1,56 @@
+{% extends "./base.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Historial de trabajos</h1>
+        <div class="table-responsive">
+        <table class="table table-stripped">
+            <thead>
+
+            <tr>
+                <th>id</th>
+                <th>Nombre cliente</th>
+                <th>Apellido cliente</th>
+                <th>Nombre artista</th>
+                <th>Fecha de tattoo</th>
+                <th>Estilo de tattoo</th>
+                <th>Lugar del cuerpo</th>
+            </tr>
+
+            </thead>
+            <tbody>
+            {% for tattoos in tattoos %}
+
+            <tr>
+                <td>{{tattoos.id}}</td>
+                <td>{{tattoos.nombre_cliente}}</td>
+                <td>{{tattoos.apellido_cliente}}</td>
+                <td>{{tattoos.nombre_artista}}</td>
+                <td>{{tattoos.fecha_tat}}</td>
+                <td>{{tattoos.estilo_tat}}</td>
+                <td>{{tattoos.lugar_tat}}</td>
+            
+            </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+
+{% for tattoos in tattoos %}
+           
+
+{% endfor %}
+
+{% endblock %}
+
